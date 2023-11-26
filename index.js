@@ -236,7 +236,7 @@ function viewRoles() {
 
 function viewEmployees() {
 	let query =
-		'SELECT employee.id, employee.first_name, employee.last_name, employee_role.title, department.name, employee_role.salary, employee.manager_id FROM employee JOIN employee_role ON employee.role_id = employee_role.id JOIN department ON employee_role.department_id = department.id';
+		'SELECT employee.id, employee.first_name, employee.last_name, employee_role.title, department.name, employee_role.salary,employee.manager_id FROM employee JOIN employee_role ON employee.role_id = employee_role.id JOIN department ON employee_role.department_id = department.id';
 	db.query(query, (err, results) => {
 		if (err) throw err;
 		console.table(results);
