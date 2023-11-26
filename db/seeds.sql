@@ -1,24 +1,26 @@
-INSERT INTO departments (name)
-VALUES ("Sales"),
-       ("Finance"),
-       ("Sales"),
-       ("Engineering"),
-       ("Legal");
 
-INSERT INTO roles (department_id, title, salary)
-VALUES (1, "level 1", 100),
-       (2, "level 1", 100),
-       (1, "level 3", 300),
-       (3, "level 1", 100),
-       (5, "level 1", 100),
-       (1, "level 4", 100),
-       (5, "level 2", 200);
+USE company_db;
+-- INSERT INTO department (name)
+-- VALUES ("Sales"),
+--        ("Finance"),
+--        ("Engineering"),
+--        ("Legal");
+
+INSERT INTO employee ( first_name, last_name, role_id, manager_id)
+VALUES ("Arthur", "Miller",1,1),
+       ("Chinua", "Achebe",2,3),
+       ("Margaret", "Atwood",3,2),
+       ("Gabriel", "Garcia",4,3),
+       ("Garcia" , "Marquez",5,4),
+       ("Simone", "de Beauvoir",6,1 ),
+       ("Jon", "Doe",7,5 );
+
+-- INSERT INTO employee_role (department_id, title, salary)
+-- VALUES (1, "Senior Sales Advocate", 82000.00),
+--        (2, "Payroll Speacialist", 60000.00),
+--        (3, "Software Engineer", 101000.00),
+--        (4, "HR Manager", 85000.00),
+--        (1, "Sales Advocate", 55000.00),
+--        (2, "Tax Specialist", 90000.00),
+--        (3, "Engineer", 90000.00);
        
-INSERT INTO employee (department_id, first_name, last_name)
-VALUES (1, "Arthur", "Miller" 100),
-       (2, "Chinua", "Achebe" 100),
-       (1, "Margaret", "Atwood" 300),
-       (3, "Gabriel", "Garcia"  100),
-       (5, "Garcia" , "Marquez" 100),
-       (1, "Simone", "de Beauvoir", 100),
-       (5, "Jon", "Doe", 200);
